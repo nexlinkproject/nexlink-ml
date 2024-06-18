@@ -1,7 +1,12 @@
 # NEXTLINK - MACHINE LEARNING REPO
 
 ## Description
-This repository contains the code and resources for training machine learning text classification model, scheduling algorithm, and feedback learning for Nextlink application. The repository divided into 3 folders, that is notebook as it is contain all of ipynb files, model which contains all the saved and exported model and components, and dataset.
+This repository contains the code and resources for training machine learning text classification model, scheduling algorithm, and feedback learning for Nextlink application. 
+
+### Directory
+- Notebook : Contains python files for the model, scheduling algorithm, and feedback learning
+- dataset : contains dataset csv file for the models
+- model : contains exported files (.h5, .pkl)
 
 ## 1. Navigate and Get The Dataset File
 
