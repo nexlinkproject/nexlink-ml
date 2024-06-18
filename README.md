@@ -5,6 +5,7 @@ This repository contains the code and resources for training machine learning te
 
 ## Installation
 To run this repository you will need dependencies and libraries as in the requirements.txt file
+
 '''bash
 pip install -r requirements.txt
 
