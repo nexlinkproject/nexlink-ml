@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y libpq-dev && \
     pip install psycopg2-binary python-dotenv
 
 # Expose any necessary ports (optional, uncomment if needed)
-EXPOSE 80
+EXPOSE 8080
 
-# Run feedback learning script when the container launches
-CMD ["python", "Notebook/feedback_learning_Final.py"]
+# Run the app using gunicorn
+CMD ["gunicorn", "-b", "0.0.0.0:8080", "Notebook.feedback_learning_Final:app"]
