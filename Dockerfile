@@ -7,12 +7,21 @@ WORKDIR /app
 # Copy the current directory contents into the container at /app
 COPY . /app
 
+# Copy the service account key file into the container
+COPY service-account.json /app/service-account.json
+
+# Copy the .env file into the container
+COPY .env /app/.env
+
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r Notebook/requirements.txt
 
 # Install additional dependencies for PostgreSQL
 RUN apt-get update && apt-get install -y libpq-dev && \
     pip install psycopg2-binary python-dotenv
+
+# Load the environment variables from the .env file
+RUN echo "source /app/.env" >> ~/.bashrc
 
 # Expose any necessary ports (optional, uncomment if needed)
 EXPOSE 8080
