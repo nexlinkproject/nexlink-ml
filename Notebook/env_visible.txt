@@ -1,6 +1,0 @@
-# .env
-DB_NAME=example
-DB_USER=example
-DB_PASSWORD=example
-DB_HOST=example
-DB_PORT=example
