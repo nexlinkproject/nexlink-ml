@@ -1,7 +1,7 @@
-# NEXTLINK - MACHINE LEARNING REPO
+# NEXLINK - MACHINE LEARNING REPO
 
 ## Description
-This repository contains the code and resources for training machine learning text classification model, scheduling algorithm, and feedback learning for Nextlink application. 
+This repository contains the code and resources for training machine learning text classification model, scheduling algorithm, and feedback learning for Nexlink application. 
 
 ### Directory
 - Notebook : Contains python files for the model, scheduling algorithm, and feedback learning
