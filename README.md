@@ -7,6 +7,7 @@ This repository contains the code and resources for training machine learning te
 - Notebook : Contains python files for the model, scheduling algorithm, and feedback learning
 - dataset : contains dataset csv file for the models
 - model : contains exported files (.h5, .pkl)
+- monitor : contains cloud function deployment to trigger the retraining script model
 
 ## 1. Navigate and Get The Dataset File
 
