@@ -8,6 +8,9 @@ from google.cloud import bigquery, storage
 from tensorflow.keras.models import load_model
 from dotenv import load_dotenv
 
+# Set the environment variable to disable GPU
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+
 # Load environment variables from .env file
 load_dotenv()
 
@@ -43,8 +46,38 @@ def run_model():
 
         if df.empty:
             return jsonify({"message": "No data to train on"}), 204
-
+        
         # Filter and process the data
+        valid_labels_list = [
+            'Analisis Kebutuhan',
+            'Deployment',
+            'Desain UI/UX',
+            'Dokumentasi',
+            'Backend Development',
+            'Frontend Development',
+            'Implementasi Fitur',
+            'Integrasi Model',
+            'Pembersihan dan Preprocessing Data',
+            'Pembuatan Basis Data',
+            'Pengujian dan Perbaikan',
+            'Pengujian Integrasi',
+            'Pengujian Sistem',
+            'Pengujian Unit',
+            'Pengujian User Acceptance (UAT)',
+            'Pengumpulan Data',
+            'Perancangan Basis Data',
+            'Evaluasi Model',
+            'Visualisasi Data',
+            'Pengembangan API',
+            'Presentasi dan Demo',
+            'Pengujian Fungsionalitas',
+            'Integrasi API'
+        ]
+
+        df = df[df['label_task'].isin(valid_labels_list)]
+        if df.empty:
+            return jsonify({"message": "No data to train on"}), 204
+
         label_counts = df['label_task'].value_counts()
         valid_labels = label_counts[label_counts >= 3].index
         filtered_df = df[df['label_task'].isin(valid_labels)]
