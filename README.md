@@ -2,7 +2,7 @@
 
 ## Description
 
-This repository contains the code and resources for training machine learning text classification model, scheduling algorithm, and feedback learning for Nexlink application. 
+This repository contains the code and resources for training machine learning text classification model, scheduling algorithm, and feedback learning for Nexlink application. This repository also contain Feedback_learning API
 
 ### Directory
 
