@@ -18,7 +18,18 @@ This repository contains the code and resources for training machine learning te
 
 It start with understanding the data, preprocessing data, train the model, evaluatte and improve, load the model in the scheduling algorithm, and feedback learning to improve the model.
 
+## Step to train the model
+1. Open the notebook_training file which consists of all of the model and algorithms code. Also preapre the dataset which in dataset folder
+2. Fork or download it so you can run it locally
+3. Prepare your IDE (colab, jupyter, etc.)
+4. Make sure the directory of the dataset is correct
+5. Run the text-classification-model which automatically save your model, .h5, and pkls
+6. you can then proceed the scheduling algorithm and try with different output
+7. About the API of this scheduling and text classification model is on ml-api repository
+
 ## Step to build the dockerfile
+
+dockerfile for feedbacklearning algorithm
 
 ### 1. Build the DockerFile
 
